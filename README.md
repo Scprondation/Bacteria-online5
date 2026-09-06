@@ -25,22 +25,6 @@
 .\gradlew.bat :server:run
 ```
 
-## ПК-версия (Windows EXE)
-
-Модуль `desktop` использует общие игровые картинки, не требует Android SDK и подключается к существующему серверу.
-
-```powershell
-.\gradlew.bat :desktop:packageWindows
-```
-
-В Windows проще запустить `build-desktop-windows.bat`: скрипт выбирает JDK Android Studio для Gradle и полный JDK для упаковки. Для этого `jpackage.exe` из JDK 17+ должен быть доступен в `PATH`.
-
-Готовый файл запуска: `desktop\build\jpackage\windows\BacteriaOnline5\BacteriaOnline5.exe`.
-
-Сборки для Linux и macOS выполняются на соответствующей ОС: `:desktop:packageLinux` и `:desktop:packageMacos`.
-
-Если wrapper ещё не создан, можно запускать через локальный Gradle из кэша Android Studio.
-
 ## Протокол сервера
 
 Сервер слушает TCP-порт `5055` и принимает строки JSON:
